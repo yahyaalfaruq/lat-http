@@ -28,7 +28,7 @@ const server = http.createServer(function (req, res) {
         let { name, newUsia } = JSON.parse(body);
         let foundIndex = data.findIndex((user) => user.name === name);
         if (foundIndex !== -1) {
-          data[foundIndex].usia = newUsia; // Update usia
+          data[foundIndex].usia = newUsia;
           res.writeHead(200, {
             "Content-Type": "application/json",
           });
